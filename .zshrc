@@ -23,6 +23,8 @@ eval "$(starship init zsh)"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+bindkey "ç" fzf-cd-widget
+
 # fzf catppuccin-macchiato
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
