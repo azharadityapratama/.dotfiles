@@ -15,5 +15,7 @@ return {
 
     vim.keymap.set("n", "<leader>qp", quarto.quartoPreview, { silent = true })
     vim.keymap.set("n", "<leader>qcp", quarto.quartoClosePreview, { silent = true })
+    vim.keymap.set("n", "<leader>qop", "o```{python}<CR>```<esc>O")
+    vim.keymap.set("n", "<leader>qor", "o```{r}<CR>```<esc>O")
   end,
 }
