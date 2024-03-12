@@ -8,6 +8,9 @@ return {
     vim.g.loaded_netrwPlugin = 1
 
     require("nvim-tree").setup({
+      filters = {
+        custom = { ".DS_Store" },
+      },
       renderer = {
         group_empty = true,
       },
