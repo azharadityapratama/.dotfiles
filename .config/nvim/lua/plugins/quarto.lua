@@ -6,6 +6,17 @@ return {
       dependencies = {
         { "neovim/nvim-lspconfig" },
       },
+      opts = {
+        buffers = {
+          set_filetype = true,
+        },
+        handle_leading_whitespace = true,
+      },
+    },
+  },
+  opts = {
+    lspFeatures = {
+      languages = { "r", "python", "julia", "bash", "lua", "html", "dot", "javascript", "typescript", "ojs" },
     },
   },
   config = function()

@@ -19,6 +19,7 @@ return {
     "onsails/lspkind.nvim",
     "windwp/nvim-autopairs",
     "quarto-dev/quarto-nvim",
+    "kristijanhusak/vim-dadbod-completion",
   },
   config = function()
     local cmp = require("cmp")
@@ -54,6 +55,7 @@ return {
         { name = "buffer",  max_item_count = 5 },
         { name = "path",    max_item_count = 3 },
         { name = "luasnip" },
+        { name = "vim-dadbod-completion"},
       }),
       formatting = {
         expandable_indicator = true,

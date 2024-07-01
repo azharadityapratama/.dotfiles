@@ -39,14 +39,20 @@ vim.opt.scrolloff = 8
 -- Enable breakindent
 vim.opt.breakindent = true
 
--- Set indent size and smartindent
-vim.opt.shiftwidth = 2
+-- Set indent size and space tabstop
 vim.opt.smartindent = true
-
--- Default 2 spaces tab
 vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "java",
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.softtabstop = 4
+    vim.opt_local.tabstop = 4
+  end
+})
 
 -- Show line length marker
 vim.opt.colorcolumn = "80"
