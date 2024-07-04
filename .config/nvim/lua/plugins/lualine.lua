@@ -5,8 +5,6 @@ return {
     require("lualine").setup({
       extensions = {
         "fugitive",
-        "lazy",
-        "mason",
         "nvim-tree",
       },
       options = {

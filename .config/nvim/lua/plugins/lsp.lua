@@ -28,7 +28,6 @@ return {
 			taplo = {},
 			emmet_language_server = {},
 			jdtls = {},
-      r_language_server = {},
       astro = {},
 		}
 
