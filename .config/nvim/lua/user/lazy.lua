@@ -28,4 +28,7 @@ require("lazy").setup({
 	install = {
 		colorscheme = { "catppuccin-macchiato" },
 	},
+  rocks = {
+    enabled = false,
+  }
 })

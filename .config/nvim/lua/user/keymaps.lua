@@ -1,21 +1,24 @@
 -- Clipboard
-vim.keymap.set("n", "<leader>Y", '"+yg_', { silent = true })
-vim.keymap.set("n", "<leader>y", '"+y', { silent = true })
-vim.keymap.set("v", "<leader>y", '"+y', { silent = true })
-vim.keymap.set("n", "<leader>p", '"+p', { silent = true })
-vim.keymap.set("n", "<leader>P", '"+P', { silent = true })
-vim.keymap.set("v", "<leader>p", '"+p', { silent = true })
-vim.keymap.set("v", "<leader>P", '"+P', { silent = true })
+vim.keymap.set("n", "<leader>Y", '"+yg_', { desc = "[Y]ank end of line to system clipboard" })
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "[y]ank to system clipboard" })
+vim.keymap.set("v", "<leader>y", '"+y', { desc = "[y]ank to system clipboard" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "[p]aste from system clipboard" })
+vim.keymap.set("n", "<leader>P", '"+P', { desc = "[P]aste from system clipboard above" })
+vim.keymap.set("v", "<leader>p", '"+p', { desc = "[p]aste from system clipboard" })
+vim.keymap.set("v", "<leader>P", '"+P', { desc = "[P]aste from system clipboard above" })
 
 -- Telescope
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ft", "<cmd>Telescope<CR>", {})
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
-vim.keymap.set("n", "<leader>fl", builtin.live_grep, {})
-vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, {})
+local wk = require("which-key")
+wk.add({
+  { "<leader>f",  group = "Telescope" },
+  { "<leader>fb", "<cmd>Telescope buffers<CR>",                   desc = "[B]uffers" },
+  { "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "[C]urrent Buffer Fuzzy Find" },
+  { "<leader>ff", "<cmd>Telescope find_files<CR>",                desc = "[F]ind Files" },
+  { "<leader>fg", "<cmd>Telescope git_files<CR>",                 desc = "[G]it Files" },
+  { "<leader>fh", "<cmd>Telescope help_tags<CR>",                 desc = "[H]elp Tags" },
+  { "<leader>fl", "<cmd>Telescope live_grep<CR>",                 desc = "[L]ive Grep" },
+  { "<leader>ft", "<cmd>Telescope<CR>",                           desc = "[T]elescope Builtin" },
+})
 
 -- Diagnostic
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
@@ -33,8 +36,10 @@ vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 
 -- NvimTree
-vim.keymap.set("n", "<leader>tt", "<cmd>NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>tf", "<cmd>NvimTreeFindFileToggle<CR>")
-vim.keymap.set("n", "<leader>tc", "<cmd>NvimTreeCollapse<CR>")
-vim.keymap.set("n", "<leader>tr", "<cmd>NvimTreeRefresh<CR>")
-
+wk.add({
+  { "<leader>t",  group = "NvimTree" },
+  { "<leader>tc", "<cmd>NvimTreeCollapse<CR>",       desc = "NvimTree Collapse" },
+  { "<leader>tf", "<cmd>NvimTreeFindFileToggle<CR>", desc = "NvimTree Find File Toggle" },
+  { "<leader>tr", "<cmd>NvimTreeRefresh<CR>",        desc = "NvimTree Refresh" },
+  { "<leader>tt", "<cmd>NvimTreeToggle<CR>",         desc = "NvimTree Toggle" },
+})

@@ -34,7 +34,12 @@ export FZF_DEFAULT_OPTS=" \
 # search and open a file in neovim
 alias of="fd --type f --hidden --exclude .git | fzf-tmux --preview 'bat --style=numbers --color=always {}' | xargs nvim"
 
+# nice zsh stuff
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# vim mode
+bindkey -v
+
+# postgres path
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
