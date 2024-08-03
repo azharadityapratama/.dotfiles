@@ -3,33 +3,29 @@ brew tap homebrew/cask-fonts
 # Install cask packages
 
 apps=(
-  alacritty
   aldente
   alfred
   appcleaner
   discord
   docker
-  font-hack-nerd-font
   gimp
+  google-chrome
   handbrake
   iina
   maccy
   mendeley
   miniconda
-  notion
+  obsidian
   obs
   openvpn-connect
   postman
   qbittorrent
-  quarto
   rectangle
-  retroarch-metal
-  slack
-  spotify
-  steam
+  the-unarchiver
   tor-browser
   transnomino
   visual-studio-code
+  wezterm
   zoom
 )
 

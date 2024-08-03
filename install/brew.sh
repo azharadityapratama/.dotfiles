@@ -7,25 +7,27 @@ brew upgrade
 # Install packages
 
 apps=(
-  asciiquarium
   bat
-  cmatrix
   fd
   fzf
-  fcc
+  gcc
   git
   go
   gradle
-  htop
   jdtls
+  lazygit
   neofetch
   neovim
   openjdk
+  postgresql@16
   ripgrep
-  rustup-init
+  rustup
   starship
   stow
   tmux
+  wget
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 brew install "${apps[@]}"
