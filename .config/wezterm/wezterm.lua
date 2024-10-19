@@ -19,5 +19,11 @@ config.window_padding = {
   bottom = 0,
 }
 
+config.front_end = 'OpenGL'
+config.freetype_load_target = 'Light'
+config.freetype_render_target = 'HorizontalLcd'
+config.cell_width = 0.9
+config.freetype_load_flags = 'NO_HINTING'
+
 -- and finally, return the configuration to wezterm
 return config

@@ -21,7 +21,7 @@ return {
 			html = {},
 			cssls = {},
       tailwindcss = {},
-			tsserver = {},
+			ts_ls = {},
 			eslint = {},
 			clangd = {},
 			pyright = {},
