@@ -24,7 +24,9 @@ apps=(
   rustup
   starship
   stow
+  thefuck
   tmux
+  tree
   wget
   zsh-autosuggestions
   zsh-syntax-highlighting

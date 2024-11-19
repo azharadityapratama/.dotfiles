@@ -43,3 +43,6 @@ wk.add({
   { "<leader>tr", "<cmd>NvimTreeRefresh<CR>",        desc = "NvimTree Refresh" },
   { "<leader>tt", "<cmd>NvimTreeToggle<CR>",         desc = "NvimTree Toggle" },
 })
+
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")

@@ -8,16 +8,13 @@ apps=(
   appcleaner
   discord
   docker
-  gimp
   google-chrome
   handbrake
-  iina
+  karabiner-elements
   maccy
-  mendeley
   miniconda
   obsidian
   obs
-  openvpn-connect
   postman
   qbittorrent
   rectangle
