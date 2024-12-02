@@ -8,6 +8,8 @@ apps=(
   appcleaner
   discord
   docker
+  font-jetbrains-mono-nerd-font
+  font-meslo-lg-nerd-font
   google-chrome
   handbrake
   karabiner-elements

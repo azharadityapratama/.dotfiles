@@ -9,25 +9,34 @@ brew upgrade
 apps=(
   bat
   fd
+  ffmpeg 
+  ffmpegthumbnailer 
   fzf
   gcc
   git
   go
   gradle
+  haskell-stack
+  imagemagick
   jdtls
+  jq
   lazygit
   neofetch
   neovim
   openjdk
+  poppler
   postgresql@16
   ripgrep
   rustup
+  sevenzip
   starship
   stow
   thefuck
   tmux
   tree
   wget
+  yazi
+  zoxide
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
