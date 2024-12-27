@@ -11,9 +11,9 @@ apps=(
   fd
   ffmpeg 
   ffmpegthumbnailer 
+  fnm
   fzf
   gcc
-  ghostty
   git
   go
   gradle

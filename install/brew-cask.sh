@@ -10,6 +10,7 @@ apps=(
   docker
   font-jetbrains-mono-nerd-font
   font-meslo-lg-nerd-font
+  ghostty
   google-chrome
   handbrake
   karabiner-elements

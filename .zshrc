@@ -7,12 +7,13 @@ else
 fi
 # <<< conda initialize <<<
 
-# nvm setup
-# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-# [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
-export NVM_LAZY_LOAD=true
-source "${HOME}/.nvm.sh"
+# fnm
+FNM_PATH="/Users/azhar/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/azhar/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # starship
 eval "$(starship init zsh)"
