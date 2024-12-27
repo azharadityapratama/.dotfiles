@@ -13,10 +13,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# nvm setup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
 
+# starship
 eval "$(starship init zsh)"
 
 # vim mode
@@ -84,3 +86,5 @@ function extract() {
         echo "$1 is not a valid file."
     fi
 }
+
+export PATH="$PATH:$HOME/bin"
