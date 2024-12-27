@@ -1,22 +1,18 @@
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+    . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
 else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
+    export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
 fi
-unset __conda_setup
 # <<< conda initialize <<<
 
 # nvm setup
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+export NVM_LAZY_LOAD=true
+source "${HOME}/.nvm.sh"
 
 # starship
 eval "$(starship init zsh)"
@@ -33,7 +29,6 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # fzf init
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-bindkey "ç" fzf-cd-widget
 
 # fzf catppuccin-macchiato-transparent
 export FZF_DEFAULT_OPTS=" \
