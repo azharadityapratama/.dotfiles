@@ -13,6 +13,7 @@ apps=(
   ffmpegthumbnailer 
   fzf
   gcc
+  ghostty
   git
   go
   gradle
